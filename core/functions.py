@@ -103,6 +103,10 @@ class Functions:
 	#function command cooldwon
 	def check_cooldwon(self, user: Member, command):
 		
+		if f"{str(user.id)}.json" not in os.listdir("./database/data/cooldwons/"):
+			data = {}
+			Update(file=f"cooldwons/{str(user.id)}.json", data=data)
+			
 		data = Load(f"cooldwons/{str(user.id)}.json")
 		
 		if command not in data:
@@ -135,46 +139,11 @@ class Functions:
 	
 	#--------------------------------(aysnc func ↓)
 	
-	async def Send_line(self, channel):
-		settings = Load("settings.json")
-		if channel.id in settings["line_channel"]:
-			await channel.send(config["line"])
-			return
-		else:
-			return
-	
 	#func for use any time send line image to any channel
 	async def Send_line_Image(self, channel: TextChannel, img):
 		file_image = f"./assets/{img}"
 		send = await channel.send(file=File(file_image))
 		await send.edit("@here")
-	
-	
-	#function daily_gift
-	async def Dailygift(self):
-		
-			settings = Load("settings.json")
-			data = Load("dailygift.json")
-			
-			if settings["daily_gifts"] == "disable":
-				return 
-				
-			time = humanfriendly.parse_timespan(f"30m")
-			end_time = pyTime.time() + time
-			
-			embed = Embed(color=config["embed-color"])
-			embed.set_author(name=config["name"] + " | Gifts", icon_url=config["icon"])
-			embed.title = "**Daily Gift**"
-			embed.description = f">>> **Participate and be among the lucky ones today and get\n- {emote['gems']} 1,500\nor\n- {emote['points']} 10\n\nYour luck ^_^**"
-			embed.add_field(name="**End time**", value=f"- {emote['time']} <t:{int(end_time)}:R>")
-			embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1180266906314346677/1248580668540321917/Picsart_24-06-07_10-13-18-652.png")
-			embed.set_footer(text=f"Created By: Ash Blossom™ | {self.bot.user.name}")
-			embed.set_image(config["img"]["bg"])
-			
-			channel = await self.bot.fetch_channel(settings["daliygift"])
-			#await channel.purge(limit=10)
-			send = await channel.send("@here",embed=embed)
-			await send.edit(view=DailyGifts(bot=self.bot, msg=send))
 	
 	#function welcome and verify
 	async def Welcome(self, user: Member, guild: Guild):

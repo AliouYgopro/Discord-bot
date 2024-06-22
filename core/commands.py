@@ -72,7 +72,7 @@ class CommandPointsSystem:
 		await ctx.reply(embed=embed)
 	
 	
-	async def AddGemsToUser(self, ctx: context, user: User, Gems: int):
+	async def AddGemsToUser(self, ctx: context, user: Member, Gems: int):
 		
 		author = ctx.author
 		settings= Load("settings.json")
@@ -106,7 +106,7 @@ class CommandPointsSystem:
 		await ctx.reply(f"• {user.mention} •",embed=embed)
 	
 	
-	async def AddDPToUser(self, ctx: context, user: User, DP: int):
+	async def AddDPToUser(self, ctx: context, user: Member, DP: int):
 		
 		author = ctx.author
 		settings= Load("settings.json")
@@ -147,8 +147,8 @@ class CommandPointsSystem:
 		data = users.Load(user)
 		
 		if self.functions.check_cooldwon(user=user, command="daily"):
-			dailyGem = random.randint(1350, 1900)
-			dailyDP = random.randint(1, 4)
+			dailyGem = random.randint(1500, 2500)
+			dailyDP = random.randint(1, 5)
 			
 			data["dp"] += dailyDP
 			data["gems"] += dailyGem
@@ -172,7 +172,7 @@ class CommandPointsSystem:
 	
 	
 	#function command transfer gems from users
-	async def Transfer(self, ctx: context, user: User, gem: int):
+	async def Transfer(self, ctx: context, user: Member, gem: int):
 		
 		if user and not self.functions.Check_in_guild(user, ctx.guild):
 			await self.functions.ErrorPrefix(errorLog="People outside the server have their accounts blocked. Sorry, the user must be back on the server", ctx=ctx)
@@ -212,7 +212,7 @@ class CommandPointsSystem:
 		
 	
 	#function command show profile
-	async def ProfileUser(self, ctx: context, user: User=None):
+	async def ProfileUser(self, ctx: context, user: Member=None):
 		
 		if user and not self.functions.Check_in_guild(user, ctx.guild):
 			await self.functions.ErrorPrefix(errorLog="Sorry, no user information can be displayed outside the server. The user's account is frozen", ctx=ctx)

@@ -9,10 +9,8 @@ config = {
     1129456838748942387],
     "embed-color": 0xff0053,
     "name": "Ash Blossom™",
-    "guild_ids": [1093889894377590804, 1176882321304072292],
     "icon": "https://cdn.discordapp.com/attachments/1131256995450716293/1135128313812238377/Picsart_23-07-30_08-28-54-681.png",
     "tourna-icon": "https://cdn.discordapp.com/emojis/868507366658801734.png",
-    "line": "https://cdn.discordapp.com/attachments/1180266906314346677/1181241158865797160/Picsart_23-12-04_14-27-09-677.png",
     
     "game-role":{
        "EDOPro": 1134960979743096832,

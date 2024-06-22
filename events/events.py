@@ -34,15 +34,11 @@ class Events(commands.Cog):
 			return
 			
 		await self.ygo_search.EventSearch(message=message)
-		await asyncio.sleep(1)
-		await self.functions.Send_line(channel=message.channel)
 		
 	#on_member_join
 	@commands.Cog.listener()
 	async def on_member_join(self, member):
 		if member.bot:
-			return
-		elif member.guild.id not in config["guild_ids"]:
 			return
 			
 		await self.functions.Welcome(user=member, guild=member.guild)

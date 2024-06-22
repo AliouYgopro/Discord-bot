@@ -199,8 +199,8 @@ class CommandDuelSystem:
 		
 		winnerData["gems"] += winnerGems
 		loserData["gems"] += loserGems
-		users.Update(Member=winner, data=winnerData)
-		users.Update(Member=loser, data=loserData)
+		users.Update(user=winner, data=winnerData)
+		users.Update(user=loser, data=loserData)
 		
 		prize = f"- Winner: {emote['gems']} {winnerGems:,}\n- Loser: {emote['gems']} {loserGems:,}"
 		

@@ -173,8 +173,7 @@ class Slash_Command:
 	    daliygift_channel = None,
 	    welcome_role = None,
 	    cards_news = None,
-	    daily_gifts = None,
-	    line_channel = None
+	    daily_gifts = None
 	):
 		
 		settings = Load(file="settings.json")
@@ -199,11 +198,9 @@ class Slash_Command:
 			settings["cards_news"] = cards_news.id
 		if daily_gifts is not None:
 			settings["daily_gifts"] = daily_gifts
-		if line_channel is not None:
-			settings["line_channel"].append(line_channel.id)
 		
 		
-		if any([channel_log, bot_mention,set_admin, remove_admin, daliygift_channel, welcome_role, cards_news, daily_gifts, line_channel]):
+		if any([channel_log, bot_mention,set_admin, remove_admin, daliygift_channel, welcome_role, cards_news, daily_gifts]):
 			owners = config["owners"]
 			owner = interaction.guild.owner
 			owners.append(owner.id) if owner.id not in owners else None

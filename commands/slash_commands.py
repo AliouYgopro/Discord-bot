@@ -126,11 +126,10 @@ class Slash_commands(commands.Cog):
 	    daliygift_channel: TextChannel = SlashOption(name="dailygift-channel", required=False),
 	    welcome_role: Role = SlashOption(name="welcome-role", required=False),
 	    cards_news: TextChannel = SlashOption(name="cards-news", required=False),
-	    daily_gifts = SlashOption(name="daily-gifts", description="Enable/disable daily gifts", required=False, choices=["enable", "disable"]),
-	    line_channel: TextChannel = SlashOption(name="set-channel-line", required=False)
+	    daily_gifts = SlashOption(name="daily-gifts", description="Enable/disable daily gifts", required=False, choices=["enable", "disable"])
 	):
 		
-		await self.commands.Settings(interaction=interaction, channel_log=channel_log, bot_mention=bot_mention, set_admin=set_admin, remove_admin=remove_admin, daliygift_channel=daliygift_channel, welcome_role=welcome_role, cards_news=cards_news, daily_gifts=daily_gifts, line_channel=line_channel)
+		await self.commands.Settings(interaction=interaction, channel_log=channel_log, bot_mention=bot_mention, set_admin=set_admin, remove_admin=remove_admin, daliygift_channel=daliygift_channel, welcome_role=welcome_role, cards_news=cards_news, daily_gifts=daily_gifts)
 		
 	
 	

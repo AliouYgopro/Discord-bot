@@ -6,7 +6,7 @@ from config import config
 import asyncio
 from keep_alive import keep_alive
 
-bot = commands.Bot(command_prefix = "?", intents=nextcord.Intents.all(), case_insensitive=True, strip_after_prefix=True, default_guild_ids=config["guild_ids"])
+bot = commands.Bot(command_prefix = "?", intents=nextcord.Intents.all(), case_insensitive=True, strip_after_prefix=True)
 
 
 
