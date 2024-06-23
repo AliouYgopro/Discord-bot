@@ -10,5 +10,5 @@ pip install -r requirements.txt
 
 
 # Links
-- [**Discord**](https://discord.com/invite/uEpaMttHGt)
+- [**Discord**](https://discord.com/invite/GGxZ9ZvmRU)
 - [**Free hosting**](https://bot-hosting.net/?aff=1188127051887169598)
