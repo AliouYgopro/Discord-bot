@@ -194,7 +194,7 @@ class CommandDuelSystem:
 		self.challenge_functions.ScoreDuel_Save(winner, is_winner=True, score_text=score_text)
 		self.challenge_functions.ScoreDuel_Save(player=loser, is_winner=False, score_text=score_text)
 		
-		winnerGems = randint(200, 500)
+		winnerGems = randint(300, 500)
 		loserGems = randint(150, 300)
 		
 		winnerData["gems"] += winnerGems
