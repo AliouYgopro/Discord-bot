@@ -14,8 +14,7 @@ pip install -r requirements.txt
 
 # SET TOKEN
 - Rename file ```example.env``` to ```.env``` and paste there your TOKEN
-- example
-- ```./.env›TOKEN="your_bot_token"```
+- ```.env›TOKEN="your_bot_token"```
 
 # Links
 - [**Discord**](https://discord.com/invite/GGxZ9ZvmRU)
