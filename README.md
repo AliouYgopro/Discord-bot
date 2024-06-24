@@ -8,6 +8,9 @@
 pip install -r requirements.txt
 ```
 
+# Settings / Config
+- Set your emojis & BG`s [Here](https://github.com/yusi-wr/Project-Ash-Blossom/blob/main/config.py)
+- Change settings [Here](https://github.com/yusi-wr/Project-Ash-Blossom/blob/main/database/data/settings.json) or use cmd ```/settings```
 
 # Links
 - [**Discord**](https://discord.com/invite/GGxZ9ZvmRU)
