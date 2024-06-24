@@ -12,6 +12,11 @@ pip install -r requirements.txt
 - Set your emojis & BG`s [Here](https://github.com/yusi-wr/Project-Ash-Blossom/blob/main/config.py)
 - Change settings [Here](https://github.com/yusi-wr/Project-Ash-Blossom/blob/main/database/data/settings.json) or use cmd ```/settings```
 
+# SET TOKEN
+- Rename file ```example.env``` to ```.env``` and paste there your TOKEN
+- example
+- ```./.env›TOKEN="your_bot_token"```
+
 # Links
 - [**Discord**](https://discord.com/invite/GGxZ9ZvmRU)
 - [**Free hosting**](https://bot-hosting.net/?aff=1188127051887169598)
