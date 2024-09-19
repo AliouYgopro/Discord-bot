@@ -11,7 +11,7 @@ pip install -r requirements.txt
 # Settings / Config
 - Set your emojis & BG`s [Here](https://github.com/yusi-wr/Project-Ash-Blossom/blob/main/config.py)
 - Change settings [Here](https://github.com/yusi-wr/Project-Ash-Blossom/blob/main/database/data/settings.json) or use cmd ```/settings```
-
+- Change the image from [here](https://github.com/yusi-wr/Project-Ash-Blossom/tree/main/assets)
 # SET TOKEN
 - Rename file ```example.env``` to ```.env``` and paste there your TOKEN
 - ```.env›TOKEN="your_bot_token"```
