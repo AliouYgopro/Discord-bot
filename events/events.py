@@ -36,12 +36,12 @@ class Events(commands.Cog):
 		await self.ygo_search.EventSearch(message=message)
 		
 	#on_member_join
-	@commands.Cog.listener()
-	async def on_member_join(self, member):
-		if member.bot:
-			return
-			
-		await self.functions.Welcome(user=member, guild=member.guild)
+	#@commands.Cog.listener()
+#	async def on_member_join(self, member):
+#		if member.bot:
+#			return
+#			
+#		await self.functions.Welcome(user=member, guild=member.guild)
 	
 	#on_ready
 	@commands.Cog.listener()

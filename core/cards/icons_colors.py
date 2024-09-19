@@ -35,19 +35,19 @@ icon = {
 "level": {
   "level": "<:level:1157438229855866941>",
   "rank": "<:rank:1157438296419467344>",
-  "link": "<:link:1247521574995890236>"
+  "link": "🔹"
 },
 "icon_url": {
- "DARK": "https://cdn.discordapp.com/attachments/1168583312424583168/1168583414656536586/download_1.webp",
- "LIGHT": "https://cdn.discordapp.com/attachments/1168583312424583168/1168583450379428002/download_4.webp",
- "EARTH": "https://cdn.discordapp.com/attachments/1168583312424583168/1168583440984187022/download_3.webp",
- "FIRE": "https://cdn.discordapp.com/attachments/1168583312424583168/1168583427658883142/download_2.webp",
- "WATER": "https://cdn.discordapp.com/attachments/1168583312424583168/1168583460974247988/download_6.webp",
- "WIND": "https://cdn.discordapp.com/attachments/1168583312424583168/1168583485041160302/download_7.webp",
- "DIVINE": "https://cdn.discordapp.com/attachments/1168583312424583168/1168584293778469015/download.webp",
- "Trap": "https://cdn.discordapp.com/attachments/1168583312424583168/1168583617354661888/download_9.webp",
- "Spell": "https://cdn.discordapp.com/attachments/1168583312424583168/1168583598534836295/download_8.webp",
- "Skill": "https://cdn.discordapp.com/attachments/1168583312424583168/1206522735619219496/Picsart_24-02-12_08-48-44-041.png"
+ "DARK": "https://cdn.discordapp.com/attachments/1268924620489363477/1268925009649209425/download_1.webp",
+ "LIGHT": "https://cdn.discordapp.com/attachments/1268924620489363477/1268924848240066702/download_4.webp",
+ "EARTH": "https://cdn.discordapp.com/attachments/1268924620489363477/1268924833832374312/download_3.webp",
+ "FIRE": "https://cdn.discordapp.com/attachments/1268924620489363477/1268924820687421512/download_2.webp",
+ "WATER": "https://cdn.discordapp.com/attachments/1268924620489363477/1268924865637777468/download_6.webp",
+ "WIND": "https://cdn.discordapp.com/attachments/1268924620489363477/1268924933296099401/download_7.webp",
+ "DIVINE": "https://cdn.discordapp.com/attachments/1268924620489363477/1282269892808015914/1725787335087.jpg",
+ "Trap": "https://cdn.discordapp.com/attachments/1268924620489363477/1268924986312228974/download_9.webp",
+ "Spell": "https://cdn.discordapp.com/attachments/1268924620489363477/1268924961385480296/download_8.webp",
+ "Skill": "https://cdn.discordapp.com/attachments/1268924620489363477/1268925250708439120/Picsart_24-02-12_08-48-44-041.png"
 },
 "banlist": {
   "Banned": "<:Banned:1231534325472956518>",

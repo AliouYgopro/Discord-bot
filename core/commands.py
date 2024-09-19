@@ -147,7 +147,7 @@ class CommandPointsSystem:
 		data = users.Load(user)
 		
 		if self.functions.check_cooldwon(user=user, command="daily"):
-			dailyGem = random.randint(1500, 2500)
+			dailyGem = random.randint(1500, 3000)
 			dailyDP = random.randint(1, 5)
 			
 			data["dp"] += dailyDP

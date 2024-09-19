@@ -47,9 +47,9 @@ class YGOFunctions:
 		data = requests.get(url=api, params={"misc":"yes"}).json()["data"]
 		
 		new_cards = []
-		copyname = cards_name.copy()
 		
 		if data:
+			copyname = cards_name.copy()
 			cards_data.clear()
 			cards_art.clear()
 			cards_id.clear()

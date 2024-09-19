@@ -6,8 +6,7 @@ from config import config
 import asyncio
 from keep_alive import keep_alive
 
-bot = commands.Bot(command_prefix = "?", intents=nextcord.Intents.all(), case_insensitive=True, strip_after_prefix=True)
-
+bot = commands.Bot(command_prefix = "?", intents=nextcord.Intents.all(), case_insensitive=True, strip_after_prefix=True, owner_ids=config["owners"])
 
 
 
@@ -32,7 +31,6 @@ async def unoff_commands(ctx):
 
 if __name__ == "__main__":
 	load_extensions(bot)
-	keep_alive()
 	try:
 		bot.run(os.getenv("TOKEN"))
 	except AttributeError as Error:

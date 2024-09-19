@@ -35,7 +35,7 @@ class CommandDuelSystem:
 				return
 			
 			data = challenges.Load(player=player)
-			opponent = await self.bot.fetch_Member(data['opponent'])
+			opponent = await self.bot.fetch_user(data['opponent'])
 			points = data["points"]
 			
 			embed = embed_challenge_show(player=player, opponent=opponent, points=points)
@@ -47,10 +47,10 @@ class CommandDuelSystem:
 			for file in os.listdir(f"{data_dir}challenges/"):
 				if file == "challenges.txt":
 					continue 
-				player = await self.bot.fetch_Member(int(file[:-5]))
+				player = await self.bot.fetch_user(int(file[:-5]))
 				data = challenges.Load(player)
 				
-				opponent = await self.bot.fetch_Member(data['opponent'])
+				opponent = await self.bot.fetch_user(data['opponent'])
 				points = data["points"]
 				embed = embed_challenge_show(player=player, opponent=opponent, points=points)
 				
@@ -86,7 +86,7 @@ class CommandDuelSystem:
 			
 		data = challenges.Load(player)
 		points = data["points"]
-		opponent = await self.bot.fetch_Member(data["opponent"])
+		opponent = await self.bot.fetch_user(data["opponent"])
 		createdBy = data["by"]
 		
 		if not self.functions.CheckPermisions(ctx.author) and ctx.author.id != createdBy:

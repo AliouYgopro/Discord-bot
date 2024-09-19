@@ -173,7 +173,10 @@ class Functions:
 	# error on slash_command
 	async def ErrorSlash(self, errorLog, interaction: Interaction):
 	
-		await interaction.response.send_message(embed=ErrorEmbed(desc=errorLog))
+		try:
+			await interaction.followup.send(embed=ErrorEmbed(desc=errorLog))
+		except:
+			await interaction.message.edit(embed=ErrorEmbed(desc=errorLog))
 	
 	# error prefix_command
 	async def ErrorPrefix(self, errorLog, ctx: commands.Context):
