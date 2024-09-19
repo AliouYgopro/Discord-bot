@@ -7,6 +7,7 @@ load_dotenv()
 config = {
     "owners": [1037701642356805723,
     1129456838748942387],
+    "prefix": "?",
     "embed-color": 0xff0053,
     "name": "Ash Blossom™",
     "icon": "https://cdn.discordapp.com/attachments/1279166778676744253/1279167363270578278/Haru.Urara.Yu-Gi-Oh.600.3244702.jpg",

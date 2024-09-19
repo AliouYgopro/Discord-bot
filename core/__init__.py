@@ -1,5 +1,5 @@
 
-from .load_extensions import load_extensions, load_commands, unload_commands
+from .load_extensions import load_extensions, load_commands, unload_commands, reload_commands
 from .tournaments.commands import CommandTourna
 from .functions import Functions
 from .slash_commands import Slash_Command

@@ -49,4 +49,15 @@ async def unload_commands(ctx: commands.Context, bot: commands.Bot):
 	
 	except AttributeError as Error:
 		await ctx.reply(f"```{Error}```")
+		
+async def reload_commands(ctx: commands.Context, bot: commands.Bot):
+	
+	try:
+		for filename in os.listdir("./commands"):
+			if filename.endswith("py") and filename != "__init__.py":
+				bot.reload_extension(f"commands.{filename[:-3]}")
+		await ctx.reply(embed=embed(f"{config['emoji']['yes']} All commands have been successfully reloaded"))
+	
+	except AttributeError as Error:
+		await ctx.reply(f"```{Error}```")
 	
