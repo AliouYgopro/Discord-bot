@@ -1,7 +1,7 @@
-# Ash Blossom Bot 🪷
+# YGO Discord Bot
 
 
-**A small project for a friend. Thanks to those who helped develop it. The project cannot be used on multiple servers simultaneously The project was built to be used on one Discord server only. Thanks.**
+**A small project for any one. Thanks to those who helped develop it. The project cannot be used on multiple servers simultaneously The project was built to be used on one Discord server only. Thanks.**
 
 - **install Librarys**
 ```
@@ -15,6 +15,9 @@ pip install -r requirements.txt
 # SET TOKEN
 - Rename file ```example.env``` to ```.env``` and paste there your TOKEN
 - ```.env›TOKEN="your_bot_token"```
+
+#Note 
+**The project is not complete and will receive updates and new additions**
 
 # Links
 - [**Discord**](https://discord.com/invite/GGxZ9ZvmRU)

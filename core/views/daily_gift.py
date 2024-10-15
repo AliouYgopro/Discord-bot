@@ -59,14 +59,14 @@ class DailyGifts(View):
 		embed.title = "**Congratulations**"
 		
 		if range_gift == "gem":
-			gift = randint(1000, 1500)
+			gift = randint(1000, 5500)
 			data["gems"] += gift
 			users.Update(user, data)
 			
 			embed.description = f"**You have included: {emote['gems']} {gift:,}\n\nThanks ^_^**"
 			text = f"{emote['gems']} {gift:,}"
 		else:
-			gift = randint(5, 10)
+			gift = randint(5, 50)
 			data["dp"] += gift
 			users.Update(user, data)
 			

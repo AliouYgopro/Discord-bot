@@ -1,19 +1,13 @@
+import os
+#os.system("pip install -r requirements.txt")
 import nextcord
 from nextcord.ext import commands, tasks
-import os
 from core import load_extensions, unload_commands, reload_commands, load_commands
 from config import config
 import asyncio
-from keep_alive import keep_alive
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or(config["prefix"]), intents=nextcord.Intents.all(), case_insensitive=True, strip_after_prefix=True, owner_ids=config["owners"])
 
-
-
-@bot.event
-async def on_ready():
-	
-	await bot.change_presence(status=nextcord.Status.online, activity=nextcord.Activity(type=nextcord.ActivityType.watching, name=config["name"]))
 
 
 

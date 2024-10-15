@@ -68,8 +68,5 @@ class General(commands.Cog, name="General"):
 	
 	
 	
-	
-	
-
 def setup(bot: commands.Bot):
     bot.add_cog(General(bot))

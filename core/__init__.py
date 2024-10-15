@@ -12,3 +12,4 @@ from .cards import *
 from .tickets.commands import TicketCommands
 from .tickets.views import ViewTickets
 from .tickets.functions import TicketFunction
+from .views.daily_gift import DailyGifts

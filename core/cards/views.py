@@ -6,7 +6,6 @@ from config import config
 
 emote = config["emoji"]
 
-
 #Select menu for serach by list 
 class SelectSearch(Select):
 	def __init__(self, names):

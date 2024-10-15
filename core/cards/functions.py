@@ -214,15 +214,17 @@ class YGOFunctions:
 	#function return if not found card
 	async def NoResult(self, interaction: Interaction=None, message=None):
 		
-		
-		if interaction is not None:
-			await interaction.response.send_message(embed=Embed(color=config["embed-color"], description=">>> **No results found, please try again**"))
-			return
-		elif message is not None:
-			await message.reply(embed=Embed(color=config["embed-color"], description=">>> **No results found, please try again**"))
-			return
-		else:
-			return
+		try:
+			if interaction is not None:
+				await interaction.response.send_message(embed=Embed(color=config["embed-color"], description=">>> **No results found, please try again**"))
+				return
+			elif message is not None:
+				await message.reply(embed=Embed(color=config["embed-color"], description=">>> **No results found, please try again**"))
+				return
+			else:
+				return
+		except:
+			pass
 	
 	
 	#function check and return a news cards and send to guild channels 
@@ -234,7 +236,7 @@ class YGOFunctions:
 				for name in new_cards:
 						try:
 							card = Card(card=cards_data[name])
-							await channel.send(embed=await card.embed_new_cards()) if channel else None
+							await channel.send(embed=await card.embed_new_cards())
 						except:
 							continue
 			

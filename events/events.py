@@ -5,6 +5,13 @@ from core import ViewUpdates, Functions, YGOFunctions
 import nextcord
 from config import config
 import asyncio
+from random import choice
+
+games = [
+	"EDOPro™",
+	"Dueling Nexus™",
+	"Dueling book™"
+]
 
 class Events(commands.Cog):
 	def __init__(self, bot: commands.Bot):
@@ -13,29 +20,18 @@ class Events(commands.Cog):
 		self.functions = Functions(self.bot)
 		self.ygo_search = YGOFunctions(self.bot)
 		
-		
-		#-------------(tasks start)
-		
-		self.UpdateCards.start()
-		
+		self.started = False
+
 	#----------------(tasks)
 		
-	@tasks.loop(hours=3)
-	async def UpdateCards(self):
-		await self.ygo_search.update_cards()
+	@tasks.loop(minutes=15)
+	async def Status(self):
+		await  self.bot.change_presence(status=nextcord.Status.online, activity=nextcord.Activity(type=nextcord.ActivityType.watching, name="Developed by: @yusi_wr"))
+		await asyncio.sleep(180)
+		await self.bot.change_presence(status=nextcord.Status.online, activity=nextcord.Activity(type=nextcord.ActivityType.playing, name=choice(games)))
 	
 	#----------------(events)
 	
-	#on_message member
-	@commands.Cog.listener()
-	async def on_message(self, message: Message):
-		
-		if message.author.bot:
-			return
-			
-		await self.ygo_search.EventSearch(message=message)
-		
-	#on_member_join
 	#@commands.Cog.listener()
 #	async def on_member_join(self, member):
 #		if member.bot:
@@ -46,7 +42,11 @@ class Events(commands.Cog):
 	#on_ready
 	@commands.Cog.listener()
 	async def on_ready(self):
-		
+		if not self.started:
+			self.Status.start()
+			self.started = True
+			await asyncio.sleep(2)
+			
 		self.functions.Add_View()
 		await self.ViewUpdate.Run()
 		print(Fore.LIGHTMAGENTA_EX + " • Developed by: " + Fore.LIGHTRED_EX + "𝙔𝙐𝙎𝙄")

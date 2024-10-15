@@ -26,7 +26,7 @@ class Admins(commands.Cog, name="Admins"):
 			await self.functions.NonHasPermisions(ctx=ctx)
 	
 	#a ctx command
-	@commands.command(name="a-Gems", aliases=["gems"])
+	@commands.command(name="a-Gems", aliases=["gems", "g"])
 	@commands.guild_only()
 	async def AddGems(self, ctx: context, user: User, Gems: int):
 		"""Add gems to any user - min: 1/ max: 25000"""
